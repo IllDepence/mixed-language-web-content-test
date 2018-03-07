@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+.mixlang span[class^="swap"] span.inner {
+    background: linear-gradient(to right, #89a2a7 3px, #89a2a7 3px, #e3e9eb 3px);
+    border-radius: 3px;
+    padding: 2px;
+    cursor: default;
+}
+input:checked ~ .mixlang:hover span[class^="swap"] span.inner {
+  display: none;
+}
+input[class^="check"]:checked ~ .mixlang:hover span[class^="swap"]:after {
+  background: #e3e9eb;
+  border-radius: 3px;
+  padding: 2px;
+}
+input.check-en:checked ~ .mixlang:hover span.swap-en:after {
+  content: attr(swap-en);
+}
+input.check-de:checked ~ .mixlang:hover span.swap-de:after {
+  content: attr(swap-de);
+}
+</style>
+</head>
+<body>
+<br>
+<br>
+<p>
+    <input class="check-en" type="checkbox"> English<br>
+    <input class="check-de" type="checkbox"> Deutsch<br>
+    <br>
+    Living in a
+    <span class="mixlang">
+        <span class="swap-en" swap-en="shared flat">
+        <span class="swap-de" swap-de="WG">
+            <span class="inner">シェアハウス</span>
+        </span>
+        </span>
+    </span>
+    has its benefits as well as drawbacks.
+</p>
+</body>
+<html>
